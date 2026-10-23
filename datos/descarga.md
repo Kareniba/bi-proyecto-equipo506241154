@@ -1,12 +1,12 @@
 # Descarga de las fuentes
 
-Fecha de descarga: 15/10/2026. Guardar cada archivo en `datos/raw/` con el nombre indicado (nombres propuestos por el equipo).
+Fecha de descarga: 15/10/2026. Guardar cada archivo en `datos/raw/` con el nombre indicado.
 
 | Fuente | Procedencia | Registros | Periodo | Licencia | Archivo en `datos/raw/` |
 | --- | --- | --- | --- | --- | --- |
-| F1 · Siniestros viales | https://datosabiertos.bogota.gov.co/dataset/historico-siniestros-viales-bogota-d-c | 88.804 | 2018–2020 | Abierta (CC BY 4.0) | `siniestros_viales.csv` |
-| F2 · Red semafórica | https://datosabiertos.bogota.gov.co/dataset/red-semaforica-sdm-bogota-d-c | 106 | 2018–2020 | Abierta (CC BY 4.0) | `red_semaforica.csv` |
-| F3 · Vehículos RUNT | https://www.runt.gov.co | 1.493 | 2018–2020 | Pública institucional | `vehiculos_runt.csv` |
+| F1 · Siniestros viales | https://datosabiertos.bogota.gov.co/dataset/historico-siniestros-viales-bogota-d-c | 88.804 | 2018–2020 | Abierta (CC BY 4.0) | `siniestros_bogota_2018_2020.csv` |
+| F2 · Red semafórica | https://datosabiertos.bogota.gov.co/dataset/red-semaforica-sdm-bogota-d-c | 106 | 2018–2020 | Abierta (CC BY 4.0) | `Red_Semaforica_2018_2020.csv` |
+| F3 · Vehículos RUNT | https://www.runt.gov.co | 1.493 | 2018–2020 | Pública institucional | `runt_electricos_hibridos_2018_2020.csv` |
 
 ## Pasos
 
