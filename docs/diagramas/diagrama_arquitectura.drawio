@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="SYIxOnZG4QcJ_G5DR1IU">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-11" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=5;" target="qz9wXF9eDYAnHqa_mXa0-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-12" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=5;" target="qz9wXF9eDYAnHqa_mXa0-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Fuentes de Datos&lt;/strong&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Portal de Datos Abiertos de Bogotá D.C. (Siniestralidad y Red Semafórica en CSV/XLSX)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;RUNT (Vehículos Eléctricos/Híbridos). Integración de coordenadas geoespaciales (X, Y) y telemetría semafórica.&lt;/p&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="360" width="170" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-13" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=5;" target="qz9wXF9eDYAnHqa_mXa0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-14" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=5;" target="qz9wXF9eDYAnHqa_mXa0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Procesos ETLs&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;p&gt;Canalizaciones masivas y orquestadas con &lt;strong&gt;AWS Glue / Apache NiFi&lt;/strong&gt; y &lt;strong&gt;Apache Spark (Databricks)&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Limpieza de datos, estandarización de estampas de tiempo, deduplicación y cálculo de intersecciones geoespaciales (&lt;strong&gt;PostGIS / PySpark GeoJSON&lt;/strong&gt;).&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="360" width="170" x="270" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;p&gt;&lt;strong&gt;Almacenamiento de Datos&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;p style=&quot;text-align: left;&quot;&gt;Arquitectura Medallón en Data Lake (&lt;strong&gt;Amazon S3&lt;/strong&gt;) organizada en zonas Raw (Bronce), Staging (Plata) y Curated (Oro), complementada con un Data Warehouse analítico columnar (&lt;strong&gt;Amazon Redshift&lt;/strong&gt;).&lt;/p&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="360" width="170" x="500" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;p&gt;&lt;strong&gt;Acceso Usuario Final&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p style=&quot;text-align: left;&quot;&gt;Tableros e informes interactivos de BI (&lt;strong&gt;Power BI / Tableau&lt;/strong&gt;), visores GIS de calor y puntos negros (&lt;strong&gt;ArcGIS Enterprise / QGIS / Deck.gl&lt;/strong&gt;) y microservicios &lt;strong&gt;FastAPI (REST APIs)&lt;/strong&gt; para consultas del público/investigadores.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="360" width="170" x="730" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p&gt;&lt;strong&gt;Gobierno de Datos y Metadatos&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Catálogo unificado de metadatos y linaje con &lt;/span&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Apache Atlas / AWS Glue Data Catalog&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, gestión de accesos con &lt;/span&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;AWS IAM&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, cifrado (AES-256/TLS 1.3) y monitoreo de calidad de datos con &lt;/span&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Great Expectations&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="770" x="90" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-8" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-2" style="endArrow=classic;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="qz9wXF9eDYAnHqa_mXa0-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="220" y="245" as="sourcePoint" />
+            <mxPoint x="270" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-9" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-3" style="endArrow=classic;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="qz9wXF9eDYAnHqa_mXa0-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="310" as="sourcePoint" />
+            <mxPoint x="500" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qz9wXF9eDYAnHqa_mXa0-10" edge="1" parent="1" source="qz9wXF9eDYAnHqa_mXa0-4" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=5;" target="qz9wXF9eDYAnHqa_mXa0-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="310" as="sourcePoint" />
+            <mxPoint x="500" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
