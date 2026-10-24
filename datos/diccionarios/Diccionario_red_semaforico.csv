@@ -1,0 +1,27 @@
+﻿Campo,Tipo,Descripción,Ejemplo,Problema de calidad
+X,Decimal,Coordenada X de la ubicación geográfica de la intersección semaforizada.,-74.0496896,No se identificó un problema específico para este campo en la revisión inicial.
+Y,Decimal,Coordenada Y de la ubicación geográfica de la intersección semaforizada.,4.762943832,No se identificó un problema específico para este campo en la revisión inicial.
+OBJECTID,Identificador/código,Número único que identifica el objeto dentro de la base de datos.,47,No se identificó un problema específico para este campo en la revisión inicial.
+ID,Identificador/código,"Código numérico asignado a una intersección semaforizada específica, en una dirección única.",1683,No se identificó un problema específico para este campo en la revisión inicial.
+EXTERNO,Identificador/código,Código numérico de cuatro dígitos asignado a un equipo de control que puede operar una o más intersecciones.,1075,No se identificó un problema específico para este campo en la revisión inicial.
+DIRECCION,Texto/categórico,Nomenclatura de referencia para la ubicación de una intersección semaforizada.,KR 54D X AC 183,No se identificó un problema específico para este campo en la revisión inicial.
+LOCALIDAD,Texto/categórico,Localidad de Bogotá donde se ubica la intersección.,SUBA,No se identificó un problema específico para este campo en la revisión inicial.
+EQUIPO,Texto/categórico,Tipo de equipo de control con el cual se gestiona el funcionamiento de la intersección.,C900,No se identificó un problema específico para este campo en la revisión inicial.
+NUMEROINTERSECCIONES_POREQUIPO,Categórico,Cantidad de intersecciones que puede gestionar el equipo de control implementado.,DOBLE,No se identificó un problema específico para este campo en la revisión inicial.
+UBICACIONEQUIPO,Texto/categórico,Indica si el equipo de control está ubicado en la intersección de referencia.,SI,No se identificó un problema específico para este campo en la revisión inicial.
+FECHAINSTALACION,Fecha/hora,Fecha de entrada en operación de la intersección semaforizada.,2020/08/11 00:00:00+00,No se identificó un problema específico para este campo en la revisión inicial.
+OPERACIONACTUAL,Texto/categórico,Estado de tránsito bajo el cual se encuentra funcionando la intersección.,NORMAL,No se identificó un problema específico para este campo en la revisión inicial.
+FUNCIONAMIENTO,Texto/categórico,Combinación de estrategias de control a nivel del controlador y de la central.,BT-TA,No se identificó un problema específico para este campo en la revisión inicial.
+IMPLEMENTACION,Texto/categórico,Estado bajo el cual se implementa la intersección semafórica.,DEFINITIVA,No se identificó un problema específico para este campo en la revisión inicial.
+TIPOINTERSECCION,Texto/categórico,Tipo o combinación de usuarios que regula la intersección semafórica.,"VEHICULAR, PEATONAL, CICLISTA",No se identificó un problema específico para este campo en la revisión inicial.
+GRUPOSENALES,Entero,Cantidad de entradas y salidas de una intersección semafórica que posee la dirección de referencia.,12,No se identificó un problema específico para este campo en la revisión inicial.
+TOTALGRUPOSENALES,Entero,Cantidad de entradas y salidas implementadas y operativas en el equipo de control para el código externo.,17,No se identificó un problema específico para este campo en la revisión inicial.
+NUMEROFASES,Entero,Cantidad de estados de señales que asignan el derecho de paso a grupos vehiculares o peatonales no conflictivos.,3,No se identificó un problema específico para este campo en la revisión inicial.
+GRUPOSVEHICULARES,Texto/categórico,Nomenclatura asignada a cada paso de uso exclusivamente vehicular.,"1,3,4,791",No se identificó un problema específico para este campo en la revisión inicial.
+GRUPOS_BRT,Texto/categórico,Nomenclatura asignada a cada paso de uso exclusivo por bus articulado.,"8B,92",103 de 106 registros vacíos (97.17%). Probablemente no aplica a todas las intersecciones; no asumir que son errores sin validar.
+GRUPOSPEATONALES,Texto/categórico,Nomenclatura asignada a cada paso de uso exclusivamente peatonal.,"21,23,34",1 de 106 registros vacío (0.94%). Verificar aplicabilidad según tipo de intersección.
+GRUPOSSONOROS,Texto/categórico,Nomenclatura asignada a cada paso de uso peatonal para personas con discapacidad visual.,"721, 723, 734",26 de 106 registros vacíos (24.53%). Verificar aplicabilidad según configuración de la intersección.
+GRUPOSCICLISTAS,Texto/categórico,Nomenclatura asignada a cada paso de uso exclusivamente ciclista.,"43, 44",No se identificó un problema específico para este campo en la revisión inicial.
+CANTIDADCONTADORES,Entero,Cantidad de dispositivos de conteo regresivo implementados en la intersección.,0,No se identificó un problema específico para este campo en la revisión inicial.
+FUNCIONDETECTORES,Texto/categórico,Modo de operación programado para el uso de los detectores instalados en la intersección.,Activación de sonoro,20 de 106 registros vacíos (18.87%). Verificar si hay detectores instalados en todos los elementos.
+ZONAAUTOMATICA,Identificador/código,Número de cuatro dígitos asignado a una zona que puede agrupar varias intersecciones que operan en conjunto.,1124,No se identificó un problema específico para este campo en la revisión inicial.
