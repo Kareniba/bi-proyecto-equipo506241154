@@ -1,0 +1,114 @@
+[
+  {
+    "Campo": "X",
+    "Tipo": "Decimal",
+    "Descripción": "Coordenada X de la ubicación geográfica del siniestro.",
+    "Ejemplo": "-74.121",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "Y",
+    "Tipo": "Decimal",
+    "Descripción": "Coordenada Y de la ubicación geográfica del siniestro.",
+    "Ejemplo": "4.603",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "OBJECTID",
+    "Tipo": "Identificador/código",
+    "Descripción": "Identificador del objeto geográfico en la fuente.",
+    "Ejemplo": "2",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "FORMULARIO",
+    "Tipo": "Identificador/código",
+    "Descripción": "Código del formulario asociado al registro del siniestro.",
+    "Ejemplo": "A001233353",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "CODIGO_ACCIDENTE",
+    "Tipo": "Identificador/código",
+    "Descripción": "Código identificador del accidente o siniestro registrado.",
+    "Ejemplo": "10533499",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "FECHA_OCURRENCIA_ACC",
+    "Tipo": "Fecha/hora",
+    "Descripción": "Fecha de ocurrencia del siniestro.",
+    "Ejemplo": "2020/11/19 00:00:00+00",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "ANO_OCURRENCIA_ACC",
+    "Tipo": "Entero",
+    "Descripción": "Año de ocurrencia del siniestro.",
+    "Ejemplo": "2020",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "DIRECCION",
+    "Tipo": "Texto/categórico",
+    "Descripción": "Dirección o referencia vial donde ocurrió el siniestro.",
+    "Ejemplo": "CL 26 S- KR 50 02",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "GRAVEDAD",
+    "Tipo": "Texto/categórico",
+    "Descripción": "Clasificación de la gravedad reportada para el siniestro.",
+    "Ejemplo": "CON HERIDOS",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "CLASE_ACC",
+    "Tipo": "Texto/categórico",
+    "Descripción": "Clase o tipo de siniestro vial.",
+    "Ejemplo": "OTRO",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "LOCALIDAD",
+    "Tipo": "Texto/categórico",
+    "Descripción": "Localidad de Bogotá asociada al lugar del siniestro.",
+    "Ejemplo": "PUENTE ARANDA",
+    "Problema de calidad": "17 de 88,804 registros vacíos (0.02%). Revisar completitud de la localidad."
+  },
+  {
+    "Campo": "FECHA_HORA_ACC",
+    "Tipo": "Fecha/hora",
+    "Descripción": "Fecha y hora registradas para el siniestro.",
+    "Ejemplo": "2020/11/19 02:05:00+00",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "LATITUD",
+    "Tipo": "Decimal",
+    "Descripción": "Latitud geográfica del registro.",
+    "Ejemplo": "4.603",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "LONGITUD",
+    "Tipo": "Decimal",
+    "Descripción": "Longitud geográfica del registro.",
+    "Ejemplo": "-74.121",
+    "Problema de calidad": "No se identificó un problema específico para este campo en la revisión inicial."
+  },
+  {
+    "Campo": "CIV",
+    "Tipo": "Identificador/código",
+    "Descripción": "Código de identificación vial asociado al lugar del siniestro.",
+    "Ejemplo": "16004560",
+    "Problema de calidad": "293 de 88,804 registros vacíos (0.33%). Validar si el código vial es obligatorio en todos los casos."
+  },
+  {
+    "Campo": "PK_CALZADA",
+    "Tipo": "Identificador/código",
+    "Descripción": "Referencia de calzada asociada al siniestro; la definición técnica exacta debe confirmarse con la documentación de la SDM.",
+    "Ejemplo": "214724",
+    "Problema de calidad": "16,765 de 88,804 registros vacíos (18.88%). Hallazgo de completitud; confirmar si el campo debe aplicar a todos los siniestros."
+  }
+]
