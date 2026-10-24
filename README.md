@@ -19,7 +19,7 @@ Solución de BI para la Secretaría Distrital de Movilidad (SDM) de Bogotá D.C.
 
 | Fuente | Contenido | Registros |
 | --- | --- | --- |
-| F1 | Siniestros viales de Bogotá (datos abiertos) | 88.804 |
+| F1 | Siniestros viales de Bogotá (datos abiertos) | 50.000 (muestra de 88.804) |
 | F2 | Red semafórica de Bogotá (datos abiertos) | 106 |
 | F3 | Vehículos eléctricos e híbridos (RUNT) | 1.493 |
 
