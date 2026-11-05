@@ -503,7 +503,7 @@
     <hop>
       <from>CSV file input</from>
       <to>Select values</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Select values</from>
@@ -527,7 +527,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Users\maryl\Downloads\Red_Semaforica_2018_2020.csv</filename>
+    <filename>${RUTA_FUENTES}/Red_Semaforica_2018_2020.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -540,7 +540,7 @@
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
     <format>DOS</format>
-    <encoding/>
+    <encoding>UTF-8</encoding>
     <fields>
       <field>
         <name>X</name>
@@ -1050,8 +1050,8 @@ if (FECHAINSTALACION != null &amp;&amp;
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
-        <name>X</name>
-        <rename>X</rename>
+        <name>longitud</name>
+        <rename>longitud</rename>
         <type>Number</type>
         <length>15</length>
         <precision>7</precision>
@@ -1067,8 +1067,8 @@ if (FECHAINSTALACION != null &amp;&amp;
         <storage_type/>
       </meta>
       <meta>
-        <name>Y</name>
-        <rename>Y</rename>
+        <name>latitud</name>
+        <rename>latitud</rename>
         <type>Number</type>
         <length>15</length>
         <precision>7</precision>

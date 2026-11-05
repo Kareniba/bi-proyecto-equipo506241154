@@ -438,13 +438,13 @@
   </notepads>
   <connection>
     <name>DW_LOCAL</name>
-    <server>localhost</server>
+    <server>${DW_HOST}</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>dw_siniestros</database>
-    <port>3306</port>
-    <username>dw_etl</username>
-    <password>Encrypted 2be98afc86ac385bbae0da24f8cc2fd8c</password>
+    <database>${DW_DB}</database>
+    <port>${DW_PORT}</port>
+    <username>${DW_USER}</username>
+    <password>${DW_PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -535,10 +535,10 @@
     <includeNulls>N</includeNulls>
     <rownum_field/>
     <file>
-      <name>C:/Users/maryl/Downloads/siniestross_bogota_2018_2020.json</name>
+      <name>${RUTA_FUENTES}/siniestross_bogota_2018_2020.json</name>
       <filemask/>
       <exclude_filemask/>
-      <file_required>N</file_required>
+      <file_required>Y</file_required>
       <include_subfolders>N</include_subfolders>
     </file>
     <fields>
