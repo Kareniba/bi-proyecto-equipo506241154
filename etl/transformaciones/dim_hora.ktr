@@ -437,13 +437,13 @@
   </notepads>
   <connection>
     <name>DW_LOCAL</name>
-    <server>${DW_HOST}</server>
+    <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${DW_DB}</database>
-    <port>${DW_PORT}</port>
-    <username>${DW_USER}</username>
-    <password>${DW_PASSWORD}</password>
+    <database>dw_siniestros</database>
+    <port>3306</port>
+    <username>dw_etl</username>
+    <password>Encrypted 2be98afc86ac385bbae0da24f8cc2fd8c</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -470,7 +470,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>${DW_PORT}</attribute>
+        <attribute>3306</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>

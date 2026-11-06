@@ -438,13 +438,13 @@
   </notepads>
   <connection>
     <name>DW_LOCAL</name>
-    <server>${DW_HOST}</server>
+    <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${DW_DB}</database>
+    <database>dw_siniestros</database>
     <port>3306</port>
-    <username>${DW_USER}</username>
-    <password>${DW_PASSWORD}</password>
+    <username>dw_etl</username>
+    <password>Encrypted 2be98afc86ac385bbae0da24f8cc2fd8c</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
