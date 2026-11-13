@@ -40,9 +40,10 @@ La solución implementa un flujo de integración y análisis con los siguientes 
 - **Fuentes:** archivos JSON, CSV y XLSX de siniestros, red semafórica y RUNT.
 - **ETL:** Pentaho Data Integration (PDI / Spoon), mediante transformaciones `.ktr` y un trabajo de carga `.kjb`.
 - **Data Warehouse:** MySQL 8.x o MariaDB 10.x, con el esquema `dw_siniestros`.
-- **Tablero:** Power BI, previsto para la exploración visual de los indicadores del caso.
+- **Tablero:** Power BI Desktop (`dashboard/Tablero_PowerBI_506241154.pbix`), conectado a `dw_siniestros`, con las páginas de las preguntas P0 a P3 y la página de predicciones de siniestros graves.
+- **Modelo predictivo (Entrega 3):** cuaderno de Python en `modelo/modelo_siniestros_graves.ipynb`, que entrena dos algoritmos y deja las predicciones en la tabla `pred_siniestros_graves` del data warehouse.
 
-> **Nota sobre el estado del repositorio:** están incluidos los scripts SQL del Data Warehouse y los archivos de Pentaho para las dimensiones y tablas de hechos. La carpeta `dashboard/` todavía no contiene un archivo `.pbix` ni un enlace publicado; por eso, el tablero se documenta como componente de la entrega y no se afirma que ya esté disponible en este repositorio.
+> **Estado del repositorio:** incluye los scripts SQL del Data Warehouse, los archivos de Pentaho (sin contraseñas: la conexión usa variables), el tablero de Power BI en `dashboard/`, y el modelo predictivo de la Entrega 3 en `modelo/`. Los PDF de las entregas están en `docs/entregas/`.
 
 El diagrama general de arquitectura está en [`docs/diagramas/diagrama_arquitectura.drawio.png`](docs/diagramas/diagrama_arquitectura.drawio.png), con su archivo editable `.drawio`. El modelo dimensional se encuentra en [`docs/diagramas/esquema_dimensional.png`](docs/diagramas/esquema_dimensional.png), también con su versión editable.
 
@@ -119,11 +120,39 @@ La conexión configurada en el trabajo es de tipo MySQL. Se debe contar con el c
 
 Para más información sobre el ETL y su ejecución, consulta [`etl/README.md`](etl/README.md).
 
+## Modelo predictivo (Entrega 3)
+
+**Pregunta de negocio:** ¿cuántos siniestros graves (con heridos o fallecidos) habrá en cada localidad el próximo mes, para decidir dónde reforzar control y señalización? Es un problema de regresión; la variable objetivo es `siniestros_graves` por localidad y mes.
+
+**Resultado:** la regresión lineal obtuvo MAE 4,11 y RMSE 5,45 sobre julio–diciembre de 2020, frente a MAE 4,80 y RMSE 6,70 del bosque aleatorio. El criterio de éxito (MAE menor a 5 siniestros graves por localidad y mes) se alcanzó.
+
+| Archivo | Qué contiene |
+| --- | --- |
+| `modelo/extraccion.sql` | Consulta que extrae del data warehouse una fila por localidad y mes. |
+| `modelo/datos_modelo.csv` | Resultado de la consulta (756 filas). |
+| `modelo/modelo_siniestros_graves.ipynb` | Exploración, preparación, entrenamiento, evaluación y generación de predicciones. |
+| `modelo/requirements.txt` | Librerías y versiones del cuaderno. |
+| `modelo/predicciones.csv` | Predicciones del periodo de prueba (120 filas). |
+| `modelo/pronostico_2021_01.csv` | Pronóstico de enero de 2021 por localidad. |
+| `modelo/figuras/` | Gráficos generados por el cuaderno. |
+| `dw/ddl/15_pred_siniestros_graves.sql` | Crea la tabla `pred_siniestros_graves`. |
+| `dw/ddl/16_cargar_pred_siniestros_graves.sql` | Carga las predicciones en esa tabla. |
+
+**Cómo ejecutar el cuaderno**
+
+- En Google Colab: subir `modelo_siniestros_graves.ipynb` y `datos_modelo.csv`, y elegir *Entorno de ejecución → Reiniciar sesión y ejecutar todo*. No requiere instalar nada.
+- En local: `pip install -r modelo/requirements.txt`, abrir el cuaderno en la carpeta `modelo/` y ejecutar todas las celdas.
+- Por defecto el cuaderno lee `datos_modelo.csv`. Si se definen `USAR_DW=1`, `DW_USER` y `DW_PASSWORD` (y opcionalmente `DW_HOST`, `DW_PORT`, `DW_DB`), ejecuta la consulta directamente contra el data warehouse; con `CARGAR_PRED_DW=1` carga las predicciones en `pred_siniestros_graves`. Las contraseñas nunca se guardan en el repositorio.
+
+**Tabla de predicciones:** ejecutar `15_pred_siniestros_graves.sql` y después `16_cargar_pred_siniestros_graves.sql`; `SELECT COUNT(*) FROM dw_siniestros.pred_siniestros_graves;` debe dar 120. La tabla se une con `dim_tiempo` por `sk_tiempo` y con la ubicación por `localidad`.
+
+**Página de predicciones:** está en el tablero (`dashboard/Tablero_PowerBI_506241154.pbix`) y muestra los valores reales y predichos con filtros por localidad y mes.
+
 ## Estructura del repositorio
 
 ```text
 bi-proyecto-equipo506241154/
-├── dashboard/              # Espacio destinado al tablero de Power BI
+├── dashboard/              # Tablero de Power BI (.pbix)
 ├── datos/
 │   ├── raw/                # Fuentes originales
 │   ├── muestras/           # Muestras de las fuentes
@@ -139,7 +168,7 @@ bi-proyecto-equipo506241154/
 │   ├── transformaciones/   # Transformaciones Pentaho (.ktr)
 │   ├── trabajos/           # Orquestación de la carga (.kjb)
 │   └── README.md           # Documentación del ETL
-├── modelo/                 # Espacio destinado al modelo analítico/predictivo
+├── modelo/                 # Modelo predictivo: cuaderno, consulta de extracción, datos y requirements.txt
 └── README.md
 ```
 
@@ -154,6 +183,7 @@ bi-proyecto-equipo506241154/
 1. Clonar el repositorio.
 2. Descargar las tres fuentes siguiendo `datos/descarga.md` y guardarlas en `datos/raw/`.
 3. Revisar el modelo dimensional en `docs/diagramas/esquema_dimensional.png` (editable: `esquema_dimensional.drawio`).
-4. Las etapas de DW, ETL, dashboard y modelo se agregan en las Entregas 2 y 3.
+4. Crear el data warehouse y cargarlo con `etl/trabajos/carga_completa.kjb` (ver `etl/README.md`).
+5. Para el modelo predictivo, seguir la sección «Modelo predictivo (Entrega 3)».
 
 
